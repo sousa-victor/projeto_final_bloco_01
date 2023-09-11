@@ -1,4 +1,7 @@
-﻿namespace projeto_final_bloco_01
+﻿using projeto_final_bloco_01.Model;
+
+namespace projeto_final_bloco_01
+    
 {
     public class Program
     {
@@ -8,6 +11,10 @@
 
             int idAnuncio, ano, numLugares;
             string marca, modelo, categoria;
+
+            Estendida a1 = new Estendida(1, 2014, 2, "Audi", "R8", "esportivo", true);
+            a1.Visualizar();
+
             do
             {
                 Console.ForegroundColor = ConsoleColor.Black;
@@ -28,8 +35,15 @@
                 Console.WriteLine("****************************************************************");
                 Console.ResetColor();
 
-                opcao = Convert.ToInt32(Console.ReadLine());
-
+                try
+                {
+                    opcao = Convert.ToInt32(Console.ReadLine());
+                }
+                catch(FormatException){
+                    Console.ForegroundColor=ConsoleColor.Red;
+                    Console.WriteLine("Digite valores inteiros!");
+                    Console.ResetColor();
+                }
                 switch (opcao)
                 {
                     case 1:
