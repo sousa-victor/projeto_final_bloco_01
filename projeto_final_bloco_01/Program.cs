@@ -44,7 +44,7 @@
                         modelo = Console.ReadLine();
                         Console.Write("Ano: ");
                         ano = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("Categoria: (SUV/Hatch/Sedan/Esportivo) ");
+                        Console.Write("Categoria: (SUV/Hatch/Sedan/Esportivo");
                         categoria = Console.ReadLine();
                         Console.Write("Número de lugares: ");
                         numLugares = Convert.ToInt32(Console.ReadLine());
